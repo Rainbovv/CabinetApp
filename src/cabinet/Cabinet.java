@@ -9,6 +9,23 @@ public class Cabinet {
 
     public Cabinet(){}
 
+
+////////////////////////////////  SETTERS  ////////////////////////////////
+    public void put(String shelfName, Thing thing){
+
+        try{
+            if(cabinetsShelves[getNumByName(shelfName)] == null)
+                cabinetsShelves[getNumByName(shelfName)]  = thing;
+            else
+                System.err.println("THE SHELF IS OCCUPIED");
+        }
+        catch (IndexOutOfBoundsException e){
+            System.err.println("ERROR: NO SUCH SHELF!");
+        }
+    }
+    
+    
+////////////////////////////////  GETTERS  ////////////////////////////////
     public Thing whatIsOn(String shelfName){
         Thing onShelf = null;
 
@@ -24,19 +41,7 @@ public class Cabinet {
         return onShelf;
     }
 
-    public void put(String shelfName, Thing thing){
-
-        try{
-            if(cabinetsShelves[getNumByName(shelfName)] == null)
-                cabinetsShelves[getNumByName(shelfName)]  = thing;
-            else
-                System.err.println("THE SHELF IS OCCUPIED");
-        }
-        catch (IndexOutOfBoundsException e){
-            System.err.println("ERROR: NO SUCH SHELF!");
-        }
-    }
-
+    // GET + SET
     public Thing take(String shelfName){
         Thing takenThing = whatIsOn(shelfName);
 
