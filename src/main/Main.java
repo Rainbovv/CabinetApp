@@ -14,11 +14,11 @@ public class Main {
         Cup myLovelyCup = (Cup)cabinet.take("middleShelf");
         myLovelyCup.fill(true);
         cabinet.put("middleShelf", myLovelyCup);
-//
+
         Robot r2d2 = (Robot)cabinet.take("bottomShelf");
         r2d2.charge(85);
         cabinet.put("bottomShelf", r2d2);
-//
+
         System.out.println(cabinet.whatIsOn("topShelf"));
         System.out.println(cabinet.whatIsOn("middleShelf"));
         System.out.println(cabinet.whatIsOn("bottomShelf"));
