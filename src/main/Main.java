@@ -16,7 +16,7 @@ public class Main {
         cabinet.put("middleShelf", myLovelyCup);
 
         Robot r2d2 = (Robot)cabinet.take("bottomShelf");
-        r2d2.charge(85);
+        r2d2.chargeIt(85);
         cabinet.put("bottomShelf", r2d2);
 
         System.out.println(cabinet.whatIsOn("topShelf"));
