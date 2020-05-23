@@ -12,7 +12,8 @@ public class Robot extends Thing {
     }
 
 ////////////////////////////////  SETTERS  ////////////////////////////////
-    public void charge(int charge) {
+    public void chargeIt(int charge) {
+        
         if (this.charge + charge > 100) {
             this.charge = 100;
             System.out.println("The battery is full");
